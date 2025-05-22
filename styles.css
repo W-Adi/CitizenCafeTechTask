@@ -1,21 +1,21 @@
 /* Reset browser defaults and set base styles */
 body {
-  margin: 0;										/* Do not take the default browser margiins*/
-  background-color: #F8EEA1;						/* Yellow background */
+  margin: 0;							/* Do not take the default browser margiins*/
+  background-color: #F8EEA1;					/* Yellow background */
   font-family: 'Rethink Sans', sans-serif;			/* Page font */
-  color: black;										/* Font color */
-  height: 100vh;									/* Sets the height of the page to 100% of the visible screen */
-  display: flex;									/* Makes the body a flex container (all child items centered as defined in next two lines) */
-  justify-content: center;							/* Centers the content horizontally */
-  align-items: center;								/* Centers the content vertically */
+  color: black;							/* Font color */
+  height: 100vh;						/* Sets the height of the page to 100% of the visible screen */
+  display: flex;						/* Makes the body a flex container (all child items centered as defined in next two lines) */
+  justify-content: center;					/* Centers the content horizontally */
+  align-items: center;						/* Centers the content vertically */
 }
 
 /* Container for all content in this page */
 .container {
   text-align: center;
-  width: 90%;									/* Sets the container's width to 90% of its parent element (in this case, the body); Makes the container responsive by using a percentage instead of fixed pixels; Prevents content from touching the edges of the screen on mobile devices */
-  max-width: 800px;								/* Sets an upper limit on how wide the container can grow; about 9-12cm on laptop screen,4-6.5 for mobile */
-  padding: 20px;								/* Adds 20 pixels of internal spacing on all four sides of the container */
+  width: 90%;							/* Sets the container's width to 90% of its parent element (in this case, the body); Makes the container responsive by using a percentage instead of fixed pixels; Prevents content from touching the edges of the screen on mobile devices */
+  max-width: 800px;						/* Sets an upper limit on how wide the container can grow; about 9-12cm on laptop screen,4-6.5 for mobile */
+  padding: 20px;						/* Adds 20 pixels of internal spacing on all four sides of the container */
 }
 
 /* Styling for main heading */
@@ -27,39 +27,39 @@ h1 {
 
 /* Photo frame with consistent border and dimensions */
 .photo-frame {
-  display: inline-block;								/* Shrinks the frame to fit its content */
-  border: 1px solid black;								/* The actual frame */
-  overflow: hidden;										/* Ensures the image doesn't spill out of the frame by cropping it. just a back up in case img didnt shrink (define in .photo-frame img) */
-  margin: 0 auto;										/* Centers the frame: 0 sets top and bottom margins to zero, auto sets equal left and right margins */
-  max-width: 100%;										/* Makes sure the photo frame never exceeds the width of its parent container; important for responsiveness — e.g., on smaller screens, it will scale down as needed. */
+  display: inline-block;					/* Shrinks the frame to fit its content */
+  border: 1px solid black;					/* The actual frame */
+  overflow: hidden;						/* Ensures the image doesn't spill out of the frame by cropping it. just a back up in case img didnt shrink (define in .photo-frame img) */
+  margin: 0 auto;						/* Centers the frame: 0 sets top and bottom margins to zero, auto sets equal left and right margins */
+  max-width: 100%;						/* Makes sure the photo frame never exceeds the width of its parent container; important for responsiveness — e.g., on smaller screens, it will scale down as needed. */
 }
 
 /* Image styling for proper display */
-.photo-frame img {								/* Targets any <img> element that is inside an element with the class .photo-frame */
-  display: block;								/* Changes the image to behave like a block-level element - important for responsiveness; There’s no unwanted spacing under the image;It’s easier to center or stack */ 
-  width: 100%;									/* Tells the image to stretch to fill the entire width of its parent (.photo-frame), regardless of the image’s original pixel size; Keeps the image responsive — it scales based on the container. */
-  height: auto;									/* Automatically adjusts the height to keep the image’s original aspect ratio. if the image is very tall, it spills down and not up */
+.photo-frame img {						/* Targets any <img> element that is inside an element with the class .photo-frame */
+  display: block;						/* Changes the image to behave like a block-level element - important for responsiveness; There’s no unwanted spacing under the image;It’s easier to center or stack */ 
+  width: 100%;							/* Tells the image to stretch to fill the entire width of its parent (.photo-frame), regardless of the image’s original pixel size; Keeps the image responsive — it scales based on the container. */
+  height: auto;							/* Automatically adjusts the height to keep the image’s original aspect ratio. if the image is very tall, it spills down and not up */
 }
 
 /* Counter style for indicating current position */
 .counter {
-  margin-top: 10px;									/* Distance from image above*/
+  margin-top: 10px;						/* Distance from image above*/
   font-size: 14px;
 }
 
 /* Button styling with accessibility considerations */
 button {
-  margin-top: 20px;											/* Adds space above the button to separate it from elements above */
-  padding: 10px 0; 											/* Padding above and below button text */
+  margin-top: 20px;						/* Adds space above the button to separate it from elements above */
+  padding: 10px 0; 						/* Padding above and below button text */
   font-size: 16px;											
   background-color: #212121;
   color: white;
-  border: none;												/* Removes the default browser border (line) around the button */
-  border-radius: 20px;										/* Rounds the corners */
-  cursor: pointer;											/* Crusor changes to pointer when hovering */
+  border: none;							/* Removes the default browser border (line) around the button */
+  border-radius: 20px;						/* Rounds the corners */
+  cursor: pointer;						/* Crusor changes to pointer when hovering */
   transition: background-color 0.3s, transform 0.1s;		/* Background color change on hover, over 0.3 seconds */
-  width: 160px; 											/* Set exact width to match the image width */
-  max-width: 80%;											/* Max width of the parent container. responsive safeguard: on wider screens, it's 160px; on smaller ones, it can shrink */
+  width: 160px; 						/* Set exact width to match the image width */
+  max-width: 80%;						/* Max width of the parent container. responsive safeguard: on wider screens, it's 160px; on smaller ones, it can shrink */
 }
 
 /* Interactive hover state for better UX */
@@ -69,13 +69,13 @@ button:hover {
 
 /* Media queries for responsive design */
 /* Mobile phones */
-@media (max-width: 480px) {						/* @media is an at-rule used to apply specific styles based on the results of one or more media queries; 480px width cover most mobile screens */
+@media (max-width: 480px) {					/* @media is an at-rule used to apply specific styles based on the results of one or more media queries; 480px width cover most mobile screens */
   h1 {
-	font-size: 22px;							/* Font size for mobile */
+	font-size: 22px;					/* Font size for mobile */
   }
   
   button {
-	width: 140px;								/* Overrides the 160px button size */
-	font-size: 14px;							/* Overrides the 16px font size */
+	width: 140px;						/* Overrides the 160px button size */
+	font-size: 14px;					/* Overrides the 16px font size */
   }
 }
