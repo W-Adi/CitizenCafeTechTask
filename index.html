@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Sets the character encoding to UTF-8 for proper text rendering -->
+  <meta charset="UTF-8">
+  
+  <!-- Makes the page responsive across different devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Page title that appears in browser tab -->
+  <title>
+    Stavi From Behind
+  </title>
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    
+	<!-- Title to present on screen-->
+	<h1>
+	  Stavi From Behind	
+	</h1>
+    
+    <div class="photo-frame">
+      <!-- 
+	    Image element with appropriate alt text for accessibility
+	    id-connect to JavaScript; src-image file name; alt-what to display if image was not found 
+	  -->
+      <img id="photo" src="photo1.jpg" alt="Photo 1">						
+    </div>
+    
+    <!-- 
+	  Counter displaying current position in the carousel
+	  class-knows to go to .counter CSS; id-connects to JavaScript 
+	-->
+    <div class="counter" id="counter">
+	  1/4		<!-- counter text to initialy display -->
+	</div>
+    
+	<!-- 
+	  A clickable button element.
+	  When the user clicks it, the JavaScript function "nextPhoto()" is called.
+	-->
+    <button onclick="nextPhoto()">
+	  Next		<!-- Visible text label shown on the button -->
+	</button>
+  </div>
+
+  <!-- Link to external JS -->
+  <script src="script.js"></script>
+  
+</body>
+</html>
